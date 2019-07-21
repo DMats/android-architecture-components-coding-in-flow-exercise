@@ -38,6 +38,12 @@ public class NoteRepository {
     }
 
     private static class InsertNoteAsyncTask extends AsyncTask<Note, Void, Void> {
+        private NoteDao noteDao;
+
+        private InsertNoteAsyncTask(NoteDao noteDao) {
+            this.noteDao = noteDao;
+        }
+
         @Override
         protected Void doInBackground(Note... notes) {
             return null;

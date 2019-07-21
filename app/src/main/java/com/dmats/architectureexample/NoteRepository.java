@@ -18,7 +18,7 @@ public class NoteRepository {
     }
 
     public void insert(Note note) {
-
+        new InsertNoteAsyncTask(noteDao).execute(note);
     }
 
     public void update(Note note) {

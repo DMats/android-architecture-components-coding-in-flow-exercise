@@ -15,4 +15,24 @@ public class NoteRepository {
         noteDao = noteDatabase.noteDao();
         allNotes = noteDao.getAllNotes();
     }
+
+    public void insert(Note note) {
+
+    }
+
+    public void update(Note note) {
+
+    }
+
+    public void delete(Note note) {
+
+    }
+
+    public void deleteAllNotes() {
+
+    }
+
+    public LiveData<List<Note>> getAllNotes() {
+        return allNotes;
+    }
 }

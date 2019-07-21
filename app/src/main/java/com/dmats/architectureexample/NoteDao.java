@@ -3,6 +3,7 @@ package com.dmats.architectureexample;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.Query;
 import androidx.room.Update;
 
 @Dao
@@ -16,4 +17,7 @@ public interface NoteDao {
 
     @Delete
     void delete(Note note);
+
+    @Query("DELETE FROM note_table")
+    void deleteAllNotes();
 }
